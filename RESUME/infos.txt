@@ -1,0 +1,44 @@
+With Powershell
+
+Create project Django : 
+> python -m django startproject <Project>
+
+Launch server :
+> python manage.py runserver
+
+Create applications in project folder :
+> python manage.py startapp <App>
+
+Install environment python : 
+> python3 -m venv <env>
+
+Launch environment : 
+> ./env/scripts/activate.ps1
+
+Launch python/django shell :
+> python manage.py shell
+
+Install Django & Mysql : 
+> pip install django
+> pip install mysqlclient
+
+Per new models (create new tables sql) :
+> python manage.py makemigrations
+> python manage.py migrate
+
+Initial tips :
+
+> Create urls.py per applications.
+> Create forms.py per applications.
+> Create templates folder per applications.
+> Create media folder global for store media (photos, videos ...).
+> Include new app in settings.py.
+> Change MEDIA ROOT in settings.py for redirect in media folder.
+
+If Unresolved django (...) : CTRL + SCHIFT + P (VSCODE) + reload window.
+
+MVT :
+Models : data
+Template : front
+View : front + data
+
