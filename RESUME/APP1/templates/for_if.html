@@ -1,0 +1,24 @@
+<!-- NO VIEWS/MODELS ATM  -->
+
+{% if n > 25 %}
+<p>Yes</p>
+{% elif n > 16 %}
+<p>Ok</p>
+{% else %}
+<p>No</p>
+{% endif %}
+
+<!-- loop -->
+<ul>
+  {% for couleur in couleurs %}
+  <li>{{ couleur }}</li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for code, nom in couleurs.items %}
+  <li style="color: #{{ code }}">{{ nom }}</li>
+  {% endfor %}
+</ul>
+
+<!-- if list is empty : {% empty %} -->

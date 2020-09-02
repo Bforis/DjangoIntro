@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'APP1',
+    'APP1',  # add application APP1
 ]
 
 MIDDLEWARE = [
@@ -53,12 +53,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'RESUME.urls'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Define media folder
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # Add templates folder to the root of project
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'APP1', 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Add static files to the root of folder project (html/css/js ...)
+#
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
