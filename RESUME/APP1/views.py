@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 from datetime import datetime
-
+from .forms import ContactForm, NouveauContactForm, Contact
 # Create your views here.
 # request : initial HTTP request
 # VIEWS
@@ -45,3 +45,51 @@ def addition(request, n1, n2):
     total = n1 + n2
 
     return render(request, 'add.html', locals())
+
+
+def contact(request):
+    # Construire le formulaire, soit avec les données postées,
+    # soit vide si l'utilisateur accède pour la première fois
+    # à la page.
+    form = ContactForm(request.POST or None)
+    # Nous vérifions que les données envoyées sont valides
+    # Cette méthode renvoie False s'il n'y a pas de données
+    # dans le formulaire ou qu'il contient des erreurs.
+    if form.is_valid():
+        # Ici nous pouvons traiter les données du formulaire
+        sujet = form.cleaned_data['sujet']
+        message = form.cleaned_data['message']
+        envoyeur = form.cleaned_data['envoyeur']
+        renvoi = form.cleaned_data['renvoi']
+
+        # Nous pourrions ici envoyer l'e-mail grâce aux données
+        # que nous venons de récupérer
+        envoi = True
+
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+    return render(request, 'contact.html', locals())
+
+
+def nouveau_contact(request):  # View for files/form/upload
+    sauvegarde = False
+    form = NouveauContactForm(request.POST or None, request.FILES)
+    if form.is_valid():
+        contact = Contact()
+        contact.nom = form.cleaned_data["nom"]
+        contact.adresse = form.cleaned_data["adresse"]
+        contact.photo = form.cleaned_data["photo"]
+        contact.save()
+        sauvegarde = True
+
+    return render(request, 'contact.html', {
+        'form': form,
+        'sauvegarde': sauvegarde
+    })
+
+
+def voir_contacts(request):
+    return render(
+        request,
+        'voir_contacts.html',
+        {'contacts': Contact.objects.all()}
+    )

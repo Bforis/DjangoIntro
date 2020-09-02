@@ -14,5 +14,8 @@ urlpatterns = [
 
     # VIEWS + TEMPLATES
     path('date', views.today_date),
-    path('add/<int:n1>/<int:n2>', views.addition)
+    path('add/<int:n1>/<int:n2>', views.addition),
+
+    # VIEWS + FORMS
+    path('contact/', views.contact, name='contact'),
 ]
