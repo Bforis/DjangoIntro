@@ -42,3 +42,5 @@ Models : data
 Template : front
 View : front + data
 
+ForeignKey : Key shared between several tables.
+
