@@ -1,5 +1,5 @@
 from django.contrib import admin
-from RESUME.APP1.models import Categorie, Article
+from APP1.models import Categorie, Article
 
 
 class ArticleAdmin(admin.ModelAdmin):
