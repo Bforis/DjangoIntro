@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 from datetime import datetime
-from .forms import ContactForm, NouveauContactForm, Contact
+from .forms import ContactForm, NouveauContactForm
+from .models import Contact
 # Create your views here.
 # request : initial HTTP request
 # VIEWS
