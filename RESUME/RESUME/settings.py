@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'APP1',  # add application APP1
+    'RestAPP',
     'rest_framework',
 ]
 
@@ -54,7 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'RESUME.urls'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Define media folder
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Define media folder
 
 TEMPLATES = [
     {
@@ -130,6 +131,6 @@ STATIC_URL = '/static/'
 
 # Add static files to the root of folder project (html/css/js ...)
 #
-STATICFILES_DIRS = (
+"""STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-)
+)"""

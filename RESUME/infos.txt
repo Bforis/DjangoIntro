@@ -18,6 +18,12 @@ Launch environment :
 Launch python/django shell :
 > python manage.py shell
 
+Install Vue.js :
+> npm install -g @vue/cli
+
+Launch Vue server : 
+> yarn serve
+
 Install Django & Mysql : 
 > pip install django
 > pip install mysqlclient

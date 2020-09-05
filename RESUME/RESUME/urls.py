@@ -20,7 +20,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('APP1/', include('APP1.urls'))  # Include all urls from APP1.
+    path('APP1/', include('APP1.urls')),  # Include all urls from APP1.
+    path('RestAPP/', include('RestAPP.urls'))
 ]
 
 # Link urls to media folder defines in settings.py
