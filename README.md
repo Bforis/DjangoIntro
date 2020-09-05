@@ -2,7 +2,7 @@
 
 fr/en
 
-i didn't do it here, but separated the django folders in a backend folder at the root of the project and the vue.js folders in a frontend folder at the root.
+i didn't do it here, but we must have to separate the django folders in a backend folder at the root of the project and the vue.js folders in a frontend folder at the root.
 
 APP1 is an example of django applications.
 RestAPP is an example of django rest framework applications with vue.js.
