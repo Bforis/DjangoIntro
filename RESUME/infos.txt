@@ -18,6 +18,9 @@ Launch environment :
 Launch python/django shell :
 > python manage.py shell
 
+Install Django Rest Framework :
+> pip install djangorestframework
+
 Install Vue.js :
 > npm install -g @vue/cli
 
