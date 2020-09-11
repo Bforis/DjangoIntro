@@ -10,4 +10,7 @@ RestAPP is an example of django rest framework applications with vue.js.
 Used :
 - Django
 - Django Rest Framework
+- Django Cors Header
 - Vue.js
+
+See infos.txt for help
