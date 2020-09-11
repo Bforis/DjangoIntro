@@ -21,6 +21,9 @@ Launch python/django shell :
 Install Django Rest Framework :
 > pip install djangorestframework
 
+Authorize fetch between front/back = install django cors headers (don't forget to add 'corsheaders' in INSTALLED_APPS and  'corsheaders.middleware.CorsMiddleware' in MIDDLEWARE always top of 'django.middleware.common...') :
+> pip install django-cors-headers
+
 Install Vue.js :
 > npm install -g @vue/cli
 
