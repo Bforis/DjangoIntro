@@ -104,7 +104,5 @@ Article.objects.filter(categorie__nom__contains="divers")
 
  ManyToManyField & ForeignKey : https://docs.djangoproject.com/fr/3.1/topics/db/examples/
 
- slug = short label for better urls
-
 
 
