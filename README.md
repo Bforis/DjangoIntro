@@ -7,4 +7,4 @@ fr/en
 APP1 is an example of django applications.
 RestAPP is an example of django rest framework applications with vue.js (frontend folder).
 
-See infos.txt for help
+See infos.txt for more details
