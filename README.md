@@ -1,4 +1,4 @@
-# Django_Help
+# DjangoIntro
 
 fr/en
 
